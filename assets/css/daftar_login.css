@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; /* Menghapus padding untuk body */
+    height: 100vh; /* Mengatur tinggi body ke 100% viewport */
+    display: flex; /* Menggunakan flexbox */
+    justify-content: flex-end; /* Menempatkan konten ke kanan */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    background-image: url("assets/img/belajar.jpg");
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: rgba(166, 204, 78, 0.9); /* Warna latar belakang dengan transparansi */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Bayangan yang lebih gelap */
+    padding: 20px; /* Padding di dalam kontainer */
+    margin: 20px; /* Margin di sekitar form */
+    max-width: 400px; /* Lebar maksimum untuk form */
+    width: 100%; /* Lebar penuh hingga lebar maksimum */
+}
+
+.box-login{
+    border:1px solid #ccc;
+    width:300px;
+    margin:50px auto;
+    padding:10px 20px;
+    border-radius:3px;
+    box-shadow:0px 0px 10px #ccc;
+  }
+   
+  .box-form input{
+    width:100%;     
+    padding: 10px;
+    font-size: 11pt;
+    box-sizing : border-box;
+    margin : 10px 0px;
+  }
+   
+  .box-form label{
+    font-weight:bold;
+  }
+   
+  .tombol-login{
+    background : #3131ff;
+    width:100%;
+    padding:10px;
+    margin:10px 0px;
+    border:1px solid #3131ff;
+    border-radius:3px;
+    color:white;
+  }
+  
+  /* In your CSS file */
+.toggle-button {
+    margin-left: 5px; /* Adjust as needed */
+}
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Menumpuk elemen secara vertikal */
+}
+
+
+label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+input[type="submit"] {
+    background-color: #2c3e50; /* Dark button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px; /* Padding inside button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover Effect for Submit Button */
+input[type="submit"]:hover {
+    background-color: #34495e; /* Darker button color on hover */
+}
+
+/* Link Styles */
+p {
+    margin-top: 10px; /* Space above paragraph */
+}
+
+a {
+    color: #2c3e50; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

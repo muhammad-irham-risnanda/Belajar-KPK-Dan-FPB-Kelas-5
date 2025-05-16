@@ -1,0 +1,94 @@
+body {
+    background-color: #f0f4f8;
+    /* Warna latar belakang yang lebih cerah */
+}
+
+.sidebar {
+    transition: transform 0.3s ease;
+    background-color: #e9ecef;
+    /* Warna sidebar yang lebih cerah */
+}
+
+.sidebar-hidden {
+    transform: translateX(-100%);
+    /* Move the sidebar out of view */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.hidden {
+    display: none;
+}
+
+/* pagination.css */
+/* Mengatur gaya untuk pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    /* Menyelaraskan pagination di tengah */
+    list-style: none;
+    /* Menghapus bullet points */
+    padding: 0;
+    /* Menghapus padding default */
+    margin: 20px 0;
+    /* Margin atas dan bawah */
+}
+
+/* Gaya untuk setiap item halaman */
+.pagination .page-item {
+    margin: 0 3px;
+    /* Margin horizontal antar item */
+}
+
+/* Gaya untuk tautan halaman */
+.pagination .page-link {
+    display: block;
+    /* Membuat tautan menjadi blok */
+    padding: 5px 10px;
+    /* Padding dalam tautan */
+    color: #ffffff;
+    /* Warna teks tautan */
+    text-decoration: none;
+    /* Menghapus garis bawah */
+    border: 1px solid #4a4a4a; /* Warna border yang lebih lembut */
+    border-radius: 5px;
+    /* Sudut membulat */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transisi untuk efek hover */
+    background-color: #3a3a3a; /* Warna latar belakang default */
+}
+
+/* Gaya untuk tautan saat hover */
+.pagination .page-link:hover {
+    background-color: #5a5a5a; /* Warna latar belakang saat hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+/* Gaya untuk halaman aktif */
+.pagination .active .page-link {
+    background-color: #007bff; /* Warna latar belakang untuk halaman aktif */
+    color: white; /* Warna teks untuk halaman aktif */
+}
+
+/* Gaya untuk tautan sebelumnya dan berikutnya */
+.pagination .page-item .page-link {
+    background-color: #3a3a3a; /* Warna latar belakang default */
+    color: #f6f6f7; /* Warna teks default */
+}
+
+/* Gaya untuk tautan sebelumnya dan berikutnya saat hover */
+.pagination .page-item .page-link:hover {
+    background-color: #5a5a5a; /* Warna latar belakang saat hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+.text-center a {
+    margin: 0 5px;
+    /* Adjusts space between buttons */
+}
+
+.text-center .active-link {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}

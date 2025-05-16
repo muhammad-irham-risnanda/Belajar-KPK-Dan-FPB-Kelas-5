@@ -29,10 +29,10 @@
                     <p id="score" class="result text-center"></p> <!-- Tempat untuk menampilkan nilai -->
                 </div>
                 <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo base_url('index.php/pages/kpk_latihan');?>" class="btn btn-dark mx-1">
+                <a href="<?php echo base_url('/siswa/latihan-kpk');?>" class="btn btn-dark mx-1">
                     <i class="fas fa-arrow-left"></i> <span class="d-inline-block" style="margin-left: 5px;">Kembali</span>
                 </a>
-                <a href="<?php echo base_url('index.php/pages/kpk_latihan3');?>" class="btn btn-dark mx-1">
+                <a href="<?php echo base_url('/siswa/latihan-kpk-3');?>" class="btn btn-dark mx-1">
                     <span class="d-inline-block" style="margin-right: 5px;">Selanjutnya</span> <i class="fas fa-arrow-right"></i>
                 </a>
                 </div>

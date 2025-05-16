@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question h3 {
+  margin: 0;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.options li {
+  margin: 5px 0;
+}
+
+.timer {
+  font-size: 20px;
+  color: white;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex; /* Menggunakan Flexbox untuk mengatur label dan input dalam satu baris */
+  align-items: center; /* Vertically center the items */
+}
+.form-group label {
+  margin-right: 10px; /* Memberikan jarak antara label dan input */
+  width: 100px; /* Mengatur lebar label agar sejajar */
+}
+.form-control {
+  flex: 1; /* Membuat input mengambil sisa ruang yang tersedia */
+  min-width: 200px; /* Mengatur lebar minimum untuk input */
+  padding-right: 40px; /* Memberikan ruang untuk ikon mata */
+}
+.btn {
+  margin-top: 10px; /* Memberikan jarak antara tombol dan elemen di atasnya */
+}
+.box {
+  padding: 20px; /* Memberikan padding di dalam box */
+  background-color: rgba(255, 255, 255, 0.9); /* Warna latar belakang putih transparan */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk kedalaman */
+}
+.question-status-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.question-status {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  width: calc(20% - 10px); /* 5 item dalam satu baris */
+  text-align: center;
+  transition: background-color 0.3s;
+  font-size: 20px; /* Ukuran font untuk nomor */
+}
+.answered {
+  background-color: #d4edda; /* Warna hijau muda untuk terjawab */
+  color: #155724; /* Warna teks untuk terjawab */
+}
+.not-answered {
+  background-color: #f8d7da; /* Warna merah muda untuk belum terjawab */
+  color: #721c24; /* Warna teks untuk belum terjawab */
+}

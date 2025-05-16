@@ -1,3 +1,4 @@
+<title>Materi Faktor Prima-Menentukan KPK dan FPB Menggunakan Faktorisasi Prima</title>
 <style>
   body {
     background-image: url('<?php echo base_url('assets/images/hero-bg.png'); ?>');
@@ -40,7 +41,7 @@
         <p>FPB dari 75 dan 150 adalah 2 x 3 = 6</p>
       </div>
       <div class="d-flex justify-content-center mt-4">
-        <a href="<?php echo base_url('index.php/pages/faktor_prima_materi'); ?>" class="btn btn-dark mx-1">
+        <a href="<?php echo base_url('/siswa/materi-faktor-prima'); ?>" class="btn btn-dark mx-1">
           <i class="fas fa-arrow-left"></i> <span class="d-inline-block" style="margin-left: 5px;">Kembali</span>
         </a>
       </div>

@@ -69,11 +69,11 @@
 
             <!-- Tombol Selanjutnya dan Kembali -->
             <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo base_url('index.php/pages/kpk_materi'); ?>" class="btn btn-dark mx-1">
+                <a href="<?php echo base_url('/siswa/materi-kpk'); ?>" class="btn btn-dark mx-1">
                     <i class="fas fa-arrow-left"></i> <span class="d-inline-block"
                         style="margin-left: 5px;">Kembali</span>
                 </a>
-                <a href="<?php echo base_url('index.php/pages/kpk_materi3'); ?>" class="btn btn-dark mx-1">
+                <a href="<?php echo base_url('/siswa/materi-kpk-3'); ?>" class="btn btn-dark mx-1">
                     <span class="d-inline-block" style="margin-right: 5px;">Selanjutnya</span> <i
                         class="fas fa-arrow-right"></i>
                 </a>

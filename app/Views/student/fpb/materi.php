@@ -1,3 +1,4 @@
+<title>Materi FPB-Faktor</title>
 <style>
     body {
         background-image: url('<?php echo base_url('assets/images/hero-bg.png'); ?>');
@@ -70,7 +71,7 @@
                 <p class="text-center">1, 2, 3, 6, 9, 18 ... faktor dari 18</p>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo base_url('index.php/pages/fpb_materi2'); ?>" class="btn btn-dark mx-1">
+                <a href="<?php echo base_url('/siswa/materi-fpb-2'); ?>" class="btn btn-dark mx-1">
                     <span class="d-inline-block" style="margin-right: 5px;">Selanjutnya</span> <i
                         class="fas fa-arrow-right"></i>
                 </a>

@@ -1,60 +1,65 @@
+<?= view('guru/header') ?>
+<?= view('guru/sidebar') ?>
 <title>List Nilai Siswa</title>
-<!-- Main Content -->
-<div class="container mt-4">
-    <h1 class="mb-4 text-center">List Nilai Siswa</h1>
-    <h2 class="mb-3">Nilai Materi Faktor Prima</h2>
 
-    <!-- Search Bar -->
-    <form method="GET" action="<?php echo site_url('welcome/nilai_faktor_prima'); ?>" class="mb-4">
-        <div class="input-group">
-            <input type="text" name="search" value="<?php echo isset($search) ? htmlspecialchars($search) : ''; ?>"
-                class="form-control" placeholder="Search nama...">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">Search</button>
+<main class="flex-grow-1 p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?php $current = service('uri')->getSegment(2); ?>
+
+                <div class="btn-group mb-4" role="group">
+                    <a href="<?= site_url('/guru/nilai-kpk') ?>"
+                        class="btn btn<?= $current === 'nilai-kpk' ? '' : '-outline' ?>-primary">
+                        <i class="fas fa-divide mr-1"></i> Nilai KPK
+                    </a>
+                    <a href="<?= site_url('/guru/nilai-fpb') ?>"
+                        class="btn btn<?= $current === 'nilai-fpb' ? '' : '-outline' ?>-primary">
+                        <i class="fas fa-compress-alt mr-1"></i> Nilai FPB
+                    </a>
+                    <a href="<?= site_url('/guru/nilai-faktor-prima') ?>"
+                        class="btn btn<?= $current === 'nilai-faktor-prima' ? '' : '-outline' ?>-primary">
+                        <i class="fas fa-cogs mr-1"></i> Nilai Faktor Prima
+                    </a>
+                    <a href="<?= site_url('/guru/nilai-evaluasi') ?>"
+                        class="btn btn<?= $current === 'nilai-evaluasi' ? '' : '-outline' ?>-primary">
+                        <i class="fas fa-tasks mr-1"></i> Nilai Evaluasi
+                    </a>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h4><i class="fas fa-list"></i> Rekap Nilai Faktor Prima</h4>
+                </div>
+
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th width="5%">No</th>
+                            <th>Nama</th>
+                            <th>Kelas</th>
+                            <th>Skor Faktor Prima</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (empty($siswaList)): ?>
+                            <tr>
+                                <td colspan="4" class="text-center text-muted">Belum ada data nilai Faktor Prima.</td>
+                            </tr>
+                        <?php else: ?>
+                            <?php foreach ($siswaList as $idx => $siswa): ?>
+                                <tr>
+                                    <td><?= $idx + 1; ?></td>
+                                    <td><?= esc($siswa['nama']); ?></td>
+                                    <td><?= esc($siswa['kelas']); ?></td>
+                                    <td><?= esc($siswa['skor']); ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </form>
+    </div>
+</main>
 
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped">
-            <thead class="thead-light">
-                <tr>
-                    <th>ID</th>
-                    <th>Nama</th>
-                    <th>Kelas</th>
-                    <th>Skor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (!empty($siswa_faktor_prima)): ?>
-                    <?php foreach ($siswa_faktor_prima as $s): ?>
-                        <tr>
-                            <td><?php echo $s->id; ?></td>
-                            <td><?php echo $s->nama; ?></td>
-                            <td><?php echo $s->kelas; ?></td>
-                            <td><?php echo $s->skor; ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <tr>
-                        <td colspan="4" class="text-center">Tidak ada data ditemukan.</td>
-                    </tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center mb-4">
-                <?php echo $pagination; ?>
-            </ul>
-        </nav>
-    </div>
-    <!-- Link tambahan di bawah pagination -->
-    <div class="text-center mb-4">
-        <a href="<?php echo site_url('welcome/nilai_kpk'); ?>" class="btn btn-secondary">Lihat Nilai KPK</a>
-        <a href="<?php echo site_url('welcome/nilai_fpb'); ?>" class="btn btn-secondary">Lihat Nilai FPB</a>
-        <a href="<?php echo site_url('welcome/nilai_faktor_prima'); ?>" class="btn btn-secondary active-link">Lihat
-            Nilai Faktor Prima</a>
-        <a href="<?php echo site_url('welcome/nilai_evaluasi'); ?>" class="btn btn-secondary">Lihat Nilai Evaluasi</a>
-    </div>
-</div>
-</div>
+<?= view('guru/footer') ?>

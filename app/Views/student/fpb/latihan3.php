@@ -1,3 +1,4 @@
+<title>Latihan FPB</title>
 <style>
   body {
     background-image: url('<?php echo base_url('assets/images/hero-bg.png'); ?>');
@@ -26,7 +27,7 @@
         <div id="message" class="mt-3"></div>
       </div>
       <div class="d-flex justify-content-center mt-4">
-        <a href="<?php echo base_url('index.php/pages/fpb_latihan2'); ?>" class="btn btn-dark mx-1">
+        <a href="<?php echo base_url('/siswa/latihan-fpb-2'); ?>" class="btn btn-dark mx-1">
           <i class="fas fa-arrow-left"></i> <span class="d-inline-block" style="margin-left: 5px;">Kembali</span>
         </a>
       </div>

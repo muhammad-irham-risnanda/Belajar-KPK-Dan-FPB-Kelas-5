@@ -1,0 +1,137 @@
+.sidebar {
+  transition: transform 0.3s ease;
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  background-color: #343a40;
+  /* Dark background for sidebar */
+  color: white;
+  transform: translateX(-100%);
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.content {
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+
+.content-collapsed {
+  margin-left: 250px;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu-open {
+  display: block;
+}
+
+.content-box {
+  background-color: #fdfffafd;
+  /* Light Blue */
+  color: black;
+  /* Text color */
+  border: 1px solid black;
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 16px;
+  /* Padding inside the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.underline {
+  text-decoration: underline;
+  /* Underline for headings */
+}
+
+.input-box {
+  width: 70px;
+  /* Lebar input box diperbesar */
+  margin-right: 5px;
+  font-weight: bold;
+  /* Tebalkan kotak jawaban */
+}
+
+.question {
+  margin-bottom: 15px;
+  border: 1px solid #007bff;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#factors {
+  display: flex;
+  /* Use flexbox to arrange items in a row */
+  flex-wrap: wrap;
+  /* Allow wrapping to the next line if necessary */
+  gap: 10px;
+  /* Optional: Add some space between the factors */
+}
+
+.factor {
+  width: 70px;
+  /* Set a fixed width for each factor box */
+  height: 40px;
+  /* Set a fixed height for each factor box */
+  border: 2px dashed lightgreen;
+  /* Optional: Add a border for visibility */
+  display: flex;
+  /* Center content */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
+  background-color: #f0f0f0;
+  /* Optional: Background color for visibility */
+}
+
+.draggable {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.droppable {
+  width: 70px;
+  /* Set the desired width */
+  height: 40px;
+  /* Optional: Set a height for better visibility */
+  border: 2px dashed #210be9;
+  /* Optional: Change border style for better visibility */
+  display: flex;
+  /* Center content if needed */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#answers {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.answer-text {
+  margin-bottom: 10px;
+  /* Space between the answer text and the drop box */
+  font-weight: bold;
+  /* Make the text bold */
+}

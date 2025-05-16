@@ -1,3 +1,4 @@
+<title>Latihan Faktor Prima-Menentukan KPK dan FPB</title>
 <style>
     body {
         background-image: url('<?php echo base_url('assets/images/hero-bg.png'); ?>');
@@ -26,7 +27,7 @@
                 <div id="result" class="mt-3"></div>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo base_url('index.php/pages/faktor_prima_latihan'); ?>" class="btn btn-dark mx-1">
+                <a href="<?php echo base_url('/siswa/latihan-faktor-prima'); ?>" class="btn btn-dark mx-1">
                     <i class="fas fa-arrow-left"></i> <span class="d-inline-block"
                         style="margin-left: 5px;">Kembali</span>
                 </a>

@@ -1,0 +1,341 @@
+CRITICAL - 2025-05-16 00:52:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa/kpk/kpk_quiz.php"
+[Method: GET, Route: siswa/kpk]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa/kpk/kpk_quiz.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('siswa/kpk/kpk_quiz', [], true)
+ 3 APPPATH\Controllers\Siswa.php(139): view('siswa/kpk/kpk_quiz', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->kpk()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 00:52:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa/kpk/kpk_quiz.php"
+[Method: GET, Route: siswa/kpk]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa/kpk/kpk_quiz.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('siswa/kpk/kpk_quiz', [], true)
+ 3 APPPATH\Controllers\Siswa.php(139): view('siswa/kpk/kpk_quiz', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->kpk()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:02:47 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: login/auth/siswa]
+in APPPATH\Controllers\Login.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authSiswa()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:03:02 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: login/auth/siswa]
+in APPPATH\Controllers\Login.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authSiswa()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:03:11 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: login/auth/siswa]
+in APPPATH\Controllers\Login.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authSiswa()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:03:15 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: login/auth/siswa]
+in APPPATH\Controllers\Login.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authSiswa()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:11:44 --> ErrorException: Undefined property: App\Controllers\Siswa::$siswaModel
+[Method: POST, Route: siswa/kpk_submit]
+in APPPATH\Controllers\Siswa.php on line 176.
+ 1 APPPATH\Controllers\Siswa.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Siswa::$siswaModel', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 176)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->kpk_submit()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:19:30 --> Error: Class "App\Controllers\SiswaModel" not found
+[Method: GET, Route: siswa/kpk_soal]
+in APPPATH\Controllers\Siswa.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Siswa->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:19:31 --> Error: Class "App\Controllers\SiswaModel" not found
+[Method: GET, Route: siswa/materi-kpk]
+in APPPATH\Controllers\Siswa.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Siswa->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:19:32 --> Error: Class "App\Controllers\SiswaModel" not found
+[Method: GET, Route: siswa]
+in APPPATH\Controllers\Siswa.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Siswa->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:19:36 --> Error: Class "App\Controllers\SiswaModel" not found
+[Method: GET, Route: siswa]
+in APPPATH\Controllers\Siswa.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Siswa->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:20:01 --> Error: Class "App\Controllers\SiswaModel" not found
+[Method: GET, Route: siswa]
+in APPPATH\Controllers\Siswa.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Siswa->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:21:27 --> ErrorException: Attempt to read property "answer" on array
+[Method: POST, Route: siswa/kpk_submit]
+in APPPATH\Controllers\Siswa.php on line 171.
+ 1 APPPATH\Controllers\Siswa.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "answer" on array', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 171)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->kpk_submit()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:21:37 --> ErrorException: Attempt to read property "answer" on array
+[Method: POST, Route: siswa/kpk_submit]
+in APPPATH\Controllers\Siswa.php on line 171.
+ 1 APPPATH\Controllers\Siswa.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "answer" on array', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 171)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->kpk_submit()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:21:49 --> ErrorException: Attempt to read property "answer" on array
+[Method: POST, Route: siswa/kpk_submit]
+in APPPATH\Controllers\Siswa.php on line 171.
+ 1 APPPATH\Controllers\Siswa.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "answer" on array', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 171)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->kpk_submit()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:35:58 --> ErrorException: Undefined property: App\Controllers\Siswa::$siswaModel
+[Method: POST, Route: siswa/kpk/evaluasi/submit]
+in APPPATH\Controllers\Siswa.php on line 189.
+ 1 APPPATH\Controllers\Siswa.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Siswa::$siswaModel', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 189)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->kpk_evaluasi_submit()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:52:16 --> ErrorException: Undefined property: App\Controllers\Siswa::$siswaModel
+[Method: POST, Route: siswa/evaluasi/kpk/submit]
+in APPPATH\Controllers\Siswa.php on line 172.
+ 1 APPPATH\Controllers\Siswa.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Siswa::$siswaModel', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 172)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->submitKpk()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:53:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "student/evaluasi_kpk_result.php"
+[Method: POST, Route: siswa/evaluasi/kpk/submit]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('student/evaluasi_kpk_result.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('student/evaluasi_kpk_result', [], true)
+ 3 APPPATH\Controllers\Siswa.php(178): view('student/evaluasi_kpk_result', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->submitKpk()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 01:54:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "student/evaluasi_kpk_result.php"
+[Method: POST, Route: siswa/evaluasi/kpk/submit]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('student/evaluasi_kpk_result.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('student/evaluasi_kpk_result', [], true)
+ 3 APPPATH\Controllers\Siswa.php(178): view('student/evaluasi_kpk_result', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->submitKpk()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 02:01:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "header.php"
+[Method: POST, Route: siswa/evaluasi/kpk/submit]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Siswa.php(190): view('header')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->submitKpk()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-16 02:57:06 --> mysqli_sql_exception: Unknown column 'jenis' in 'where clause' in D:\XAMPP-Update\htdocs\Belajar-Matematika\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP-Update\htdocs\Belajar-Matematika\app\Controllers\Siswa.php(142): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\CodeIgniter.php(933): App\Controllers\Siswa->evaluasiKpk()
+#8 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#9 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP-Update\htdocs\Belajar-Matematika\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\XAMPP-Update\htdocs\Belajar-Matematika\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-16 02:57:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jenis' in 'where clause'
+[Method: GET, Route: siswa/evaluasi/kpk]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `time_limits`
+WHERE `jenis` = :jenis:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Siswa.php(142): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->evaluasiKpk()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 02:57:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jenis' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `time_limits`
+WHERE `jenis` = \'kpk\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `time_limits`
+WHERE `jenis` = \'kpk\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `time_limits`
+WHERE `jenis` = :jenis:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Siswa.php(142): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->evaluasiKpk()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 02:57:06 --> [Caused by] mysqli_sql_exception: Unknown column 'jenis' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `time_limits`
+WHERE `jenis` = \'kpk\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `time_limits`
+WHERE `jenis` = \'kpk\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `time_limits`
+WHERE `jenis` = \'kpk\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `time_limits`
+WHERE `jenis` = :jenis:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Siswa.php(142): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->evaluasiKpk()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 06:12:21 --> ErrorException: Undefined property: App\Controllers\Siswa::$faktorprimaModel
+[Method: GET, Route: siswa/evaluasi/faktor-prima]
+in APPPATH\Controllers\Siswa.php on line 366.
+ 1 APPPATH\Controllers\Siswa.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Siswa::$faktorprimaModel', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->evaluasiFaktorPrima()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 06:14:38 --> ErrorException: Undefined property: App\Controllers\Siswa::$FaktorPrimaModel
+[Method: GET, Route: siswa/evaluasi/faktor-prima]
+in APPPATH\Controllers\Siswa.php on line 366.
+ 1 APPPATH\Controllers\Siswa.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Siswa::$FaktorPrimaModel', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->evaluasiFaktorPrima()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 06:18:05 --> ErrorException: Undefined property: App\Controllers\Siswa::$FaktorPrimaModel
+[Method: POST, Route: siswa/evaluasi/faktor-prima/submit]
+in APPPATH\Controllers\Siswa.php on line 397.
+ 1 APPPATH\Controllers\Siswa.php(397): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Siswa::$FaktorPrimaModel', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Controllers\\Siswa.php', 397)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->submitFaktorPrima()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 06:28:49 --> ErrorException: Undefined variable $correct
+[Method: GET, Route: siswa/evaluasi]
+in APPPATH\Views\student\evaluasi\evaluasi_umum.php on line 20.
+ 1 APPPATH\Views\student\evaluasi\evaluasi_umum.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $correct', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Views\\student\\evaluasi\\evaluasi_umum.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Views\\student\\evaluasi\\evaluasi_umum.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('student/evaluasi/evaluasi_umum', [], true)
+ 5 APPPATH\Controllers\Siswa.php(442): view('student/evaluasi/evaluasi_umum', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->evaluasiUmum()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-16 06:32:23 --> ErrorException: Undefined variable $correct
+[Method: GET, Route: siswa/evaluasi]
+in APPPATH\Views\student\evaluasi\evaluasi_umum.php on line 20.
+ 1 APPPATH\Views\student\evaluasi\evaluasi_umum.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $correct', 'D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Views\\student\\evaluasi\\evaluasi_umum.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP-Update\\htdocs\\Belajar-Matematika\\app\\Views\\student\\evaluasi\\evaluasi_umum.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('student/evaluasi/evaluasi_umum', [], true)
+ 5 APPPATH\Controllers\Siswa.php(438): view('student/evaluasi/evaluasi_umum', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->evaluasiUmum()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

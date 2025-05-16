@@ -1,29 +1,38 @@
-<title>Edit Time Limit</title>
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/guru/css/bootstrap.css'); ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/guru/css/form.css'); ?>">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Time Limit</title>
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/guru/css/bootstrap.css'); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
 
+<body>
 
-<div class="container mt-5">
-    <div class="card">
-        <div class="card-header">
-            <h1><?php echo isset($time_limit) ? 'Edit' : 'Create'; ?> Time Limit</h1>
-        </div>
-        <div class="card-body">
-            <form method="post" action="">
-                <div class="form-group">
-                    <label for="limit_hours">Limit Hours:</label>
-                    <input type="number" id="limit_hours" name="limit_hours" value="<?php echo isset($time_limit) ? floor($time_limit->time_limit / 60) : 0; ?>" min="0" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="limit_minutes">Limit Minutes:</label>
-                    <input type="number" id="limit_minutes" name="limit_minutes" value="<?php echo isset($time_limit) ? $time_limit->time_limit % 60 : 0; ?>" min="0" max="59" class="form-control" required>
-                </div>
-                <div class="form-group d-flex justify-content-between">
-                    <a href="<?php echo site_url('welcome/waktu'); ?>" class="btn btn-secondary">Kembali</a>
-                    <button type="submit" class="btn btn-primary"><?php echo isset($time_limit) ? 'Update' : 'Create'; ?> Time Limit</button>
-                </div>
-            </form>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2>Edit Time Limit</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" action="<?= base_url('/guru/time-limits/update') ?>">
+                    <input type="hidden" name="id" value="<?= $timeLimit['id'] ?>">
+
+                    <div class="mb-3">
+                        <label for="time_limit" class="form-label">Time Limit (Dalam Menit)</label>
+                        <input type="text" class="form-control" id="time_limit" name="time_limit"
+                            value="<?= $timeLimit['time_limit'] ?>" required>
+                    </div>
+                    <a href="<?= site_url('/guru/time-limits') ?>" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </a>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+
+</body>
+
+</html>

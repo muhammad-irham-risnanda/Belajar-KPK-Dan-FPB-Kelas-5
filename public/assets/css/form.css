@@ -1,0 +1,24 @@
+.btn {
+    min-width: 50px; /* Minimum width for buttons */
+}
+
+.form-container {
+    max-width: 400px; /* Set width for the login box */
+    margin: 50px auto; /* Center horizontally */
+    padding: 30px; /* Add padding inside the box */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+.notification {
+    display: none;
+    margin-bottom: 15px;
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.error-message {
+    color: red; /* Error message color */
+    font-size: 0.9em; /* Smaller font size for error messages */
+}

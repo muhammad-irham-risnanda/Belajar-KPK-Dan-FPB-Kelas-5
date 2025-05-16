@@ -58,7 +58,7 @@
                     atas diperoleh dengan mengalikan 5 dengan bilangan bulat dari 1 hingga 10.</p>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo base_url('index.php/pages/kpk_materi2'); ?>" class="btn btn-dark mx-1">
+                <a href="<?php echo base_url('/siswa/materi-kpk-2'); ?>" class="btn btn-dark mx-1">
                     <span class="d-inline-block" style="margin-right: 5px;">Selanjutnya</span> <i
                         class="fas fa-arrow-right"></i>
                 </a>

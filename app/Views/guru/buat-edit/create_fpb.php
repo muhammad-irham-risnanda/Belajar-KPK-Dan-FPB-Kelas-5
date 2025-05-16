@@ -1,46 +1,49 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/guru/css/bootstrap.css'); ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/guru/css/form.css'); ?>">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <div class="container mt-5">
-    <div class="card mb-4">        
-        <div class="card-header">
-            <h2>Tambah Pertanyaan FPB</h2>
+    <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0"><i class="fas fa-plus-circle"></i> Tambah Soal FPB</h4>
         </div>
         <div class="card-body">
-            <form action="<?php echo site_url('welcome/store_fpb'); ?>" method="post">
+            <form action="<?= base_url('/guru/fpb/store'); ?>" method="post">
                 <div class="form-group">
-                    <label for="new_question">Pertanyaan:</label>
-                    <input type="text" id="new_question" name="question" required class="form-control">
+                    <label>Pertanyaan</label>
+                    <input type="text" name="question" class="form-control" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="new_option_a">Opsi A:</label>
-                    <input type="text" id="new_option_a" name="option_a" required class="form-control">
+                    <label>Opsi A</label>
+                    <input type="text" name="option_a" class="form-control" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="new_option_b">Opsi B:</label>
-                    <input type="text" id="new_option_b" name="option_b" required class="form-control">
+                    <label>Opsi B</label>
+                    <input type="text" name="option_b" class="form-control" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="new_option_c">Opsi C:</label>
-                    <input type="text" id="new_option_c" name="option_c" required class="form-control">
+                    <label>Opsi C</label>
+                    <input type="text" name="option_c" class="form-control" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="new_option_d">Opsi D:</label>
-                    <input type="text" id="new_option_d" name="option_d" required class="form-control">
+                    <label>Opsi D</label>
+                    <input type="text" name="option_d" class="form-control" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="new_answer">Jawaban (A/B/C/D):</label>
-                    <input type="text" id="new_answer" name="answer" required class="form-control">
+                    <label>Jawaban Benar <small>(A/B/C/D)</small></label>
+                    <input type="text" name="answer" class="form-control" maxlength="1" required>
                 </div>
-                
-                <div class="form-group d-flex justify-content-between">
-                    <a href="<?php echo site_url('welcome/soal_fpb'); ?>" class="btn btn-secondary">Kembali</a>
-                    <button type="submit" class="btn btn-primary">Simpan Pertanyaan</button>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Simpan
+                    </button>
+                    <a href="<?= base_url('/guru/fpb'); ?>" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </a>
                 </div>
             </form>
         </div>

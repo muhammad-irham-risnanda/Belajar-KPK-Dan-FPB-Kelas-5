@@ -11,20 +11,6 @@
         <button id="toggleButton" class="btn btn-secondary"><i class="fas fa-bars"></i></button>
         <h1 class="h3 text-white mx-auto">MATERI FAKTOR PRIMA</h1>
     </header>
-    <div class="p-2 bg-white border border-black d-flex justify-content-center align-items-center">
-        <a href="<?php echo base_url('index.php/pages/faktor_prima_materi'); ?>" class="btn btn-dark mx-1">
-            <i class="fas fa-book"></i> Materi
-        </a>
-        <a href="<?php echo base_url('index.php/pages/video_faktor_prima'); ?>" class="btn btn-dark mx-1">
-            <i class="fas fa-video"></i> Video
-        </a>
-        <a href="<?php echo base_url('index.php/pages/faktor_prima_latihan'); ?>" class="btn btn-dark mx-1">
-            <i class="fas fa-pencil-alt"></i> Latihan
-        </a>
-        <a href="<?php echo base_url('index.php/pages/faktor_prima'); ?>" class="btn btn-dark mx-1">
-            <i class="fas fa-question-circle"></i> Quiz
-        </a>
-    </div>
     <main class="p-4 flex-grow-1 overflow-auto">
         <div class="mt-4">
             <div class="mt-4 p-4 content-box rounded">

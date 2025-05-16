@@ -1,155 +1,152 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller
+namespace App\Controllers;
+
+use App\Models\UserModel;
+use App\Models\StudentModel;
+use App\Models\KpkModel;
+use App\Models\FpbModel;
+use App\Models\FaktorPrimaModel;
+use App\Models\EvaluasiModel;
+use CodeIgniter\Controller;
+
+class Welcome extends Controller
 {
+    protected $userModel;
+    protected $studentModel;
+    protected $kpkModel;
+    protected $fpbModel;
+    protected $faktorPrimaModel;
+    protected $evaluasiModel;
 
     public function __construct()
     {
-        parent::__construct();
-        $this->load->helper('url');
-        $this->load->library('session');
-        $this->load->library('pagination');
-        $this->load->model('TimeLimit_model');
-        $this->load->model('Student_model');
-        $this->load->model('User_model');
-        $this->load->model('Siswa_model');
-        $this->load->model('Kpk_model');
-        $this->load->model('Siswa_fpb_model');
-        $this->load->model('Fpb_model');
-        $this->load->model('Siswa_faktor_prima_model');
-        $this->load->model('Faktor_prima_model');
-        $this->load->model('Siswa_evaluasi_model');
-        $this->load->model('Evaluasi_model');
-        // Pastikan pengguna sudah login
-        if (!$this->session->userdata('user_id')) {
-            redirect('auth/login');
-        }
+        $this->userModel = new UserModel();
+        $this->studentModel = new StudentModel();
+        $this->kpkModel = new KpkModel();
+        $this->fpbModel = new FpbModel();
+        $this->faktorPrimaModel = new FaktorPrimaModel();
+        $this->evaluasiModel = new EvaluasiModel();
     }
 
+    // Fungsi untuk memuat header
     private function loadHeader()
     {
-        // Ambil data dari session
-        $data['username'] = $this->session->userdata('username');
-        // Load view header dengan data
-        $this->load->view('guru/header', $data);
-        $this->load->view('guru/sidebar');
+        $session = session();
+        $data['username'] = $session->get('username');
+        echo view('guru/header', $data);
+        echo view('guru/sidebar');
     }
 
-    public function list_guru(): void
+    // Fungsi untuk menampilkan daftar guru
+    public function listGuru()
     {
         $this->loadHeader();
 
-        // Ambil input pencarian
-        $data['users'] = [];
-        $data['keyword'] = '';
-        $data['per_page'] = 4; // Jumlah item per halaman
-        $data['current_page'] = $this->input->get('page') ? (int) $this->input->get('page') : 1; // Halaman saat ini
-        $offset = ($data['current_page'] - 1) * $data['per_page']; // Hitung offset
+        $keyword = $this->request->getPost('search') ?? '';
+        $perPage = 4;
+        $page = $this->request->getVar('page') ? (int) $this->request->getVar('page') : 1;
+        $offset = ($page - 1) * $perPage;
 
-        if ($this->input->post('search')) {
-            $keyword = $this->input->post('keyword');
-            $data['users'] = $this->User_model->search_users($keyword, $data['per_page'], $offset);
-            $data['keyword'] = $keyword;
+        if ($keyword) {
+            $users = $this->userModel->searchUsers($keyword, $perPage, $offset);
         } else {
-            $data['users'] = $this->User_model->get_users($data['per_page'], $offset); // Ambil data pengguna
+            $users = $this->userModel->getUsers($perPage, $offset);
         }
 
-        // Hitung total pengguna untuk paginasi
-        $data['total_users'] = $this->User_model->count_users();
-        $data['total_pages'] = ceil($data['total_users'] / $data['per_page']); // Hitung total halaman
+        $totalUsers = $this->userModel->countUsers();
+        $totalPages = ceil($totalUsers / $perPage);
 
-        // Load the view
-        $this->load->view('guru/guru', $data);
-        $this->load->view('guru/footer');
+        $data = [
+            'users' => $users,
+            'keyword' => $keyword,
+            'totalUsers' => $totalUsers,
+            'totalPages' => $totalPages,
+        ];
+
+        echo view('guru/guru', $data);
+        echo view('guru/footer');
     }
 
-    public function edit_guru($id)
+    // Fungsi untuk mengedit data guru
+    public function editGuru($id)
     {
-        $data['user'] = $this->User_model->get_user_by_id($id);
-        $this->load->view('guru/buat-edit/edit_guru_view', $data);
+        $user = $this->userModel->getUserById($id);
+        $data['user'] = $user;
+        return view('guru/buat-edit/edit_guru_view', $data);
     }
 
     // Fungsi untuk mengupdate data guru
-    public function update_guru()
+    public function updateGuru()
     {
-        $id = $this->input->post('id');
-        $data = array(
-            'username' => $this->input->post('username'),
-            'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT) // Hash password
-        );
-        $this->User_model->update_user($id, $data);
-        redirect('welcome/list_guru');
+        $id = $this->request->getPost('id');
+        $data = [
+            'username' => $this->request->getPost('username'),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+        ];
+        $this->userModel->updateUser($id, $data);
+        return redirect()->to('welcome/listGuru');
     }
 
     // Fungsi untuk menghapus data guru
-    public function delete_guru($id)
+    public function deleteGuru($id)
     {
-        $this->User_model->delete_user($id);
-        redirect('welcome/list_guru');
+        $this->userModel->deleteUser($id);
+        return redirect()->to('welcome/listGuru');
     }
-    public function list_siswa(): void
+
+    // Fungsi untuk menampilkan daftar siswa
+    public function listSiswa()
     {
         $this->loadHeader();
-        $search = $this->input->post('search'); // Ambil input pencarian
-        $config['base_url'] = site_url('welcome/list_siswa');
-        $config['total_rows'] = $this->Student_model->count_students($search); // Hitung total siswa berdasarkan pencarian
-        $config['per_page'] = 4; // Menampilkan 4 item per halaman
-        $config['uri_segment'] = 3; // Segment URI untuk pagination
+        $search = $this->request->getPost('search') ?? '';
+        $config = [
+            'base_url' => site_url('welcome/list_siswa'),
+            'total_rows' => $this->studentModel->countStudents($search),
+            'per_page' => 4,
+            'uri_segment' => 3,
+        ];
 
-        // Optional: Customize pagination styling
-        $config['full_tag_open'] = '<ul class="pagination justify-content-center">';
-        $config['full_tag_close'] = '</ul>';
-        $config['num_tag_open'] = '<li class="page-item">';
-        $config['num_tag_close'] = '</li>';
-        $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link">';
-        $config['cur_tag_close'] = '</a></li>';
-        $config['next_tag_open'] = '<li class="page-item">';
-        $config['next_tag_close'] = '</li>';
-        $config['prev_tag_open'] = '<li class="page-item">';
-        $config['prev_tag_close'] = '</li>';
-        $config['first_tag_open'] = '<li class="page-item">';
-        $config['first_tag_close'] = '</li>';
-        $config['last_tag_open'] = '<li class="page-item">';
-        $config['last_tag_close'] = '</li>';
+        $page = $this->request->getVar('page') ? $this->request->getVar('page') : 0;
+        $students = $this->studentModel->getStudents($search, $config['per_page'], $page);
+        $pagination = service('pager')->makeLinks($page, $config['per_page'], $config['total_rows']);
 
-        // Inisialisasi pagination
-        $this->pagination->initialize($config);
+        $data = [
+            'students' => $students,
+            'pagination' => $pagination,
+            'search' => $search,
+        ];
 
-        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0; // Ambil halaman saat ini
-        $data['students'] = $this->Student_model->get_students($search, $config['per_page'], $page);
-        $data['pagination'] = $this->pagination->create_links(); // Buat link pagination
-        $data['search'] = $search; // Simpan query pencarian untuk ditampilkan di view
-        // Load the view
-        $this->load->view('guru/siswa', $data);
-        $this->load->view('guru/footer');
+        echo view('guru/siswa', $data);
+        echo view('guru/footer');
     }
 
     // Fungsi untuk mengedit data siswa
-    public function edit_siswa($id)
+    public function editSiswa($id)
     {
-        $data['student'] = $this->Student_model->get_student_by_id($id);
-        $this->load->view('guru/buat-edit/edit_siswa_view', $data);
+        $student = $this->studentModel->getStudentById($id);
+        $data['student'] = $student;
+        return view('guru/buat-edit/edit_siswa_view', $data);
     }
 
     // Fungsi untuk mengupdate data siswa
-    public function update_siswa()
+    public function updateSiswa()
     {
-        $id = $this->input->post('id');
-        $data = array(
-            'username' => $this->input->post('username'),
-            'class' => $this->input->post('class'),
-            'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT) // Hash password
-        );
-        $this->Student_model->update_student($id, $data);
-        redirect('welcome/buat-edit/list_siswa');
+        $id = $this->request->getPost('id');
+        $data = [
+            'username' => $this->request->getPost('username'),
+            'class' => $this->request->getPost('class'),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+        ];
+        $this->studentModel->updateStudent($id, $data);
+        return redirect()->to('welcome/listSiswa');
     }
 
     // Fungsi untuk menghapus data siswa
-    public function delete_siswa($id)
+    public function deleteSiswa($id)
     {
-        $this->Student_model->delete_student($id);
-        redirect('welcome/list_siswa');
+        $this->studentModel->deleteStudent($id);
+        return redirect()->to('welcome/listSiswa');
     }
     public function waktu()
     {

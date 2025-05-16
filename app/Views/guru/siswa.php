@@ -1,63 +1,53 @@
-<title>List Guru Dan Siswa</title>
-<!-- Main Content -->
-<div class="flex-grow-1 p-4">
-    <h1 class="mb-4">List Siswa</h1>
+<title>List Siswa</title>
+<?= view('guru/header') ?>
+<?= view('guru/sidebar') ?>
 
-    <!-- Form Pencarian -->
-    <form method="post" action="<?php echo site_url('welcome/list_siswa'); ?>" class="mb-3">
-        <div class="input-group">
-            <input type="text" name="search" value="<?php echo isset($search) ? $search : ''; ?>"
-                placeholder="Cari siswa..." class="form-control" />
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-primary">Cari</button>
-            </div>
-        </div>
-    </form>
+<main class="flex-grow-1 p-4">
+  <?php $current = service('uri')->getSegment(2); ?>
 
-    <div class="table-container">
-        <table class="table table-bordered table-striped" id="studentsTable">
-            <thead class="thead-light">
-                <tr>
-                    <th>NO</th>
-                    <th>Nama</th>
-                    <th>Kelas</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (!empty($students)): ?>
-                    <?php foreach ($students as $s): ?>
-                        <tr>
-                            <td><?php echo $s->id; ?></td>
-                            <td><?php echo $s->username; ?></td>
-                            <td><?php echo $s->class; ?></td>
-                            <td>
-                                <a href="<?php echo site_url('welcome/edit_siswa/' . $s->id); ?>"
-                                    class="btn btn-warning btn-sm">Edit</a>
-                                <a href="<?php echo site_url('welcome/delete_siswa/' . $s->id); ?>"
-                                    class="btn btn-danger btn-sm"
-                                    onclick="return confirm('Apakah Anda yakin ingin menghapus?');">Delete</a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <tr>
-                        <td colspan="4" class="text-center">Tidak ada data siswa ditemukan.</td>
-                    </tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
-    </div>
-    <a href="<?php echo site_url('auth/register_siswa'); ?>" class="btn btn-primary mb-3">Tambah Siswa</a>
-    <!-- Pagination Links -->
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            <?php echo $pagination; // Menampilkan link pagination ?>
-        </ul>
-    </nav>
-    <div class="text-center mt-4">
-        <a href="<?php echo site_url('welcome/list_guru'); ?>" class="btn btn-secondary">Lihat Guru</a>
-        <a href="<?php echo site_url('welcome/list_siswa'); ?>" class="btn btn-secondary active-link">Lihat Siswa</a>
-    </div>
-</div>
-</div>
+  <div class="btn-group mb-4" role="group">
+    <a href="<?= site_url('/guru/siswa') ?>" class="btn btn<?= $current === 'siswa' ? '' : '-outline' ?>-primary">
+      <i class="fas fa-user-graduate mr-1"></i> Siswa
+    </a>
+    <a href="<?= site_url('/guru/guru') ?>" class="btn btn<?= $current === 'guru' ? '' : '-outline' ?>-primary">
+      <i class="fas fa-chalkboard-teacher mr-1"></i> Guru
+    </a>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <h4><i class="fas fa-list"></i> Daftar Siswa</h4>
+    <a href="<?= base_url('/register/siswa'); ?>" class="btn btn-success">
+      <i class="fas fa-plus"></i> Tambah Siswa
+    </a>
+  </div>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nama</th>
+        <th>Kelas</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($students as $student): ?>
+        <tr>
+          <td><?= $student['id'] ?></td>
+          <td><?= $student['username'] ?></td>
+          <td><?= $student['class'] ?></td>
+          <td>
+            <a href="<?= site_url('guru/editSiswa/' . $student['id']) ?>" class="btn btn-sm btn-warning">
+              <i class="fas fa-edit"></i> Edit
+            </a>
+            <a href="<?= site_url('guru/deleteSiswa/' . $student['id']) ?>" class="btn btn-sm btn-danger"
+              onclick="return confirm('Are you sure?')">
+              <i class="fas fa-trash-alt"></i> Delete
+            </a>
+          </td>
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
+</main>
+
+<?= view('guru/footer') ?>
