@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost/Belajar-KPK-dan-FPB-Kelas-5/public';
+    public string $baseURL = 'http://localhost/Belajar-KPK-dan-FPB-kelas-5/public';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
